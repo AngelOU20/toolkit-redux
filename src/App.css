@@ -35,12 +35,29 @@
 
 .card {
   display: flex;
+  flex-direction: column;
+  gap: 2em;
+
+  padding: 1em;
+}
+
+.card-title {
+  font-size: 2.6em;
+  transition: text-shadow 0.3s;
+
+  cursor: pointer;
+}
+
+.card-title:hover {
+  text-shadow: 0em 0em 2em rgba(191, 61, 230, 0.9);
+}
+
+.card-buttons {
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-
-  padding: 2em;
+  gap: 1em;
 }
 
 .read-the-docs {

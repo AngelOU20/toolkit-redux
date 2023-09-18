@@ -21,9 +21,10 @@ function App() {
       </div>
       <h1>React Toolkit and React Redux</h1>
       <div className="card">
-        <button onClick={() => dispatch(increment())}>
-          count is {counter}
-        </button>
+        <h2 className="card-title">{counter}</h2>
+        <div className="card-buttons">
+          <button onClick={() => dispatch(increment())}>Increment value</button>
+        </div>
       </div>
     </>
   );
