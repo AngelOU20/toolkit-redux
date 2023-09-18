@@ -15,8 +15,12 @@ export const counterSlice = createSlice({
       */
       state.counter += 1;
     },
+    decrement: (state) => {
+      if (state.counter <= 0) return;
+      state.counter -= 1;
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { increment } = counterSlice.actions;
+export const { increment, decrement } = counterSlice.actions;
