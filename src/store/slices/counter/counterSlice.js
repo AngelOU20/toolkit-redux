@@ -19,8 +19,12 @@ export const counterSlice = createSlice({
       if (state.counter <= 0) return;
       state.counter -= 1;
     },
+    incrementBy: (state, action) => {
+      console.log(action);
+      state.counter += action.payload;
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } = counterSlice.actions;
+export const { increment, decrement, incrementBy } = counterSlice.actions;
